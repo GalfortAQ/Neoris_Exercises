@@ -78,3 +78,39 @@ export const commonStyles = css`
     background-color: #f1f1f1;
   }
 `;
+export const userCardStyles = css`
+  .alert-msg,
+  .alert-msg > * {
+    color: #e1504d;
+    font-size: 14px;
+  }
+  .text-gray {
+    color: gray;
+  }
+  h3.text-gray {
+    margin-bottom: 20px;
+  }
+  img {
+    border-radius: 50%;
+  }
+  .card {
+    margin-top: 10px;
+    max-width: 500px;
+    padding: 30px;
+  }
+  h1 {
+    font-weight: bold;
+  }
+  .card-principalData {
+    padding-top: 20px;
+  }
+  .undefined {
+    color: gray;
+  }
+  i:hover {
+    cursor: pointer;
+  }
+  .car-infoBlock {
+    margin: 10px 0px;
+  }
+`;

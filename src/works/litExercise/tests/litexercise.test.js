@@ -1,6 +1,9 @@
 import { expect, fixture, html } from '@open-wc/testing';
 import '../litexercise-page.js';
-// const assert = require('assert');
+// import '../../components/common-header';
+// import '../../components/work-header';
+// import '../../components/input-component';
+// import '../../components/user-card';
 
 describe('Lit exercise', () => {
   let el;
@@ -15,9 +18,12 @@ describe('Lit exercise', () => {
   it('Lit Exercise is rendered correctly', async () => {
     expect(el.shadowRoot).not.to.be.null;
   });
-  it('Data type verification', () => {
+  it('Should have correct types defined', () => {
     expect(el.name).to.be.a('string');
-    expect(el.userResult).to.be.a('undefined');
-    // assert.notExists(el.name, 'name is neither `null` nor `undefined`');
+    // expect(el.userResult).to.be.a('object');
+  });
+  it('Should have default props', () => {
+    expect(el.name).to.eql('');
+    // expect(el.userResult).to.eql({});
   });
 });

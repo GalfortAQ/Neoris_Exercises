@@ -63,7 +63,9 @@ class UserCard extends LitElement {
                 <i title="Email" class="material-icons">email</i> ${this.user.email ? this.user.email : 'Undefined'}
               </div>
               <div class=${['car-infoBlock infoBlog ', this.user.blog ? '' : 'undefined']}>
-                <i title="Blog" class="material-icons">link</i> ${this.user.blog ? this.user.blog : 'Undefined'}
+                <i title="Blog" class="material-icons">link</i> ${this.user.blog
+                  ? html`<a href="${this.user.blog}">${this.user.blog}</a>`
+                  : 'Undefined'}
               </div>
             </div>
           </div>`

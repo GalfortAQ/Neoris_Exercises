@@ -33,7 +33,7 @@ class LitExercise extends LitElement {
   constructor() {
     super();
     this.name = '';
-    // this.userResult = {};
+    this.userResult = {};
   }
 
   changeName(event) {
@@ -60,7 +60,7 @@ class LitExercise extends LitElement {
         <h3>GibHub Profile</h3>
         <input class="input-text" placeholder="User name" @input=${this.changeName} />
         <button type="button" class="sd-btn-mix blue-mate" @click="${this.searchUser}">Search</button>
-        ${this.userResult ? html` <div><user-card .user="${this.userResult}"></user-card></div>` : null}
+        ${Object.keys(this.userResult).length !== 0 ? html`<user-card .user="${this.userResult}"></user-card>` : null}
       </section>
     `;
   }
